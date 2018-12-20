@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" xmlns:>
+<head>
+    <meta charset="UTF-8">
+    <title>CodeFellowship</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+</head>
+<style>
+   .links{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    }
+</style>
+
+<body>
+
+<header>
+    <h1>User</h1>
+</header>
+<!--<div th:replace= "common ::nav></div>-->
+
+
+<img src="https://cdn.pixabay.com/photo/2013/05/30/18/21/tabby-114782_960_720.jpg" width="100" height="100" alt="user image"/>
+<p>firstname</p>
+<p>lastname</p>
+<p>dateofbirth</p>
+<p>bio</p>
+        <!--<p th:text = "${user.username}"></p></a>-->
+        <!--<p th:text="${user.bio}"></p>-->
+
+<div class="links">
+    <a href="/">Home</a>
+    <a href="/user">User Profiles</a>
+</div>
+
+
+</body>
+
+</html>

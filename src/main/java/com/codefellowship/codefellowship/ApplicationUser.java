@@ -1,38 +1,32 @@
 package com.codefellowship.codefellowship;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.view.RedirectView;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import java.util.Date;
 
+@Entity
 public class ApplicationUser {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    public  long id;
+private String firstname;
+private String lastname;
+private Date dateOfBirth;
+private String username;
+private String password;
+private String bio;
 
-    //signup page
+public ApplicationUser() {
+}
 
-    @Autowired
-    private BCryptPasswordEncoder bCryptPasswordEncoder;
-
-    @ResponseBody
-    @RequestMapping(value = "/signup", method = RequestMethod.GET)
-
-    public String signup(Model m) {
-//    bCryptPasswordEncoder.encode(password);
-        return "signup";
+    public ApplicationUser(String firstname, String lastname, Date dateOfBirth, String username, String password, String bio){
+         this.firstname = firstname;
+         this.lastname = lastname;
+         this.dateOfBirth = dateOfBirth;
+         this.username = username;
+         this.password = password;
+         this.bio = bio;
     }
-
-//    @RequestMapping(value = "/signup", method = RequestMethod.POST)
-//    public RedirectView create
-
-    //
-
-    @RequestMapping(value="/users/{id}")
-    @ResponseBody
-    public String getUser(@PathVariable("id") int id){
-        return "user id: "+id;
-    }
-
 }
