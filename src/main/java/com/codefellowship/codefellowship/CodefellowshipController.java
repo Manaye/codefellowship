@@ -72,5 +72,23 @@ public String showProfiles(Model m) {
    //  m.addAttribute("user", user.get());
         return "user";
     }
+//login
+    @RequestMapping(value = "/login", method = RequestMethod.GET)
+    public String renderLoginPage(Model m){
 
+       return "login";
+    }
+    //login post
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String validateAndLoginUser(Model m){
+
+        return "user";
+    }
+    //myprofile
+//@RequestMapping(value="/myprofile", method = RequestMethod.GET)
+//public String getMyProfile(@PathVariable long id,Model m){
+//    Optional<ApplicationUser> user = userRepo.findById(id);
+//    m.addAttribute("user",user.get());
+//    return "user";
+//}
 }
