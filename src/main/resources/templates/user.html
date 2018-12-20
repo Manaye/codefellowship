@@ -7,21 +7,34 @@
 
 </head>
 <style>
-   .links{
-    display: flex;
+ body{
+   display: flex;
     flex-direction: column;
     justify-content: center;
+ }
+ footer{
+    position: absolute;
+    bottom: 0;
+    }
+   .links{
+
+    display: flex;
+  justify-content: space-around;
     }
 </style>
 
 <body>
+<div class="container-fluid">
+<header class="jumbotron">
+    <div class="links">
+        <a href="/">Home</a>
+        <a href="/posts">See my Posts</a>
+    </div>
 
-<header>
-    <h1>User</h1>
 </header>
 <!--<div th:replace= "common ::nav></div>-->
 
-
+<h1>User</h1>
 <img src="https://cdn.pixabay.com/photo/2013/05/30/18/21/tabby-114782_960_720.jpg" width="100" height="100" alt="user image"/>
 <p>firstname</p>
 <p>lastname</p>
@@ -30,12 +43,10 @@
         <!--<p th:text = "${user.username}"></p></a>-->
         <!--<p th:text="${user.bio}"></p>-->
 
-<div class="links">
-    <a href="/">Home</a>
-    <a href="/user">User Profiles</a>
+
+
 </div>
-
-
+<footer><div>&copy Codefellowship</div></footer>
 </body>
 
 </html>

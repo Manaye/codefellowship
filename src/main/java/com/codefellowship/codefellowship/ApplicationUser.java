@@ -29,4 +29,5 @@ public ApplicationUser() {
          this.password = password;
          this.bio = bio;
     }
+
 }

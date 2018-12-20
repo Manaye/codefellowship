@@ -1,5 +1,6 @@
 package com.codefellowship.codefellowship.Security;
 
+//import com.codefellowship.codefellowship.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -17,8 +18,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
     public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
         // We'll comment in these lines tomorrow, when we add a UserDetailsServiceImpl!
-        // @Autowired
-        // private UserDetailsServiceImpl userDetailsService;
+         @Autowired
+//         private UserDetailsServiceImpl userDetailsService;
 
         @Bean
         public BCryptPasswordEncoder passwordEncoder() {
@@ -44,6 +45,7 @@ import org.springframework.security.crypto.password.PasswordEncoder;
                     .authorizeRequests()
                     .antMatchers("/*").permitAll();
         }
+
 //        @Override
 //        @Bean
 //        public AuthenticationManager authenticationManagerBean() throws Exception {
